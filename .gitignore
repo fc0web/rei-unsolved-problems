@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Build outputs (for future Lean 4 additions)
+lean4/.lake/
+lean4/build/
+
+# Local drafts
+drafts/
+*.draft.md
