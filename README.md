@@ -37,6 +37,9 @@ Date: 2026-04-17–
 | 008 | FDA vs Mathlib ENat embedding equivalence | Algebraic / Lean 4 | STEP 844 | open |
 | 009 | Perelman discrete-flow convergence conditions | Dynamical | STEP 846 | open |
 | 010 | 15 infinity types cross-operation table | Taxonomy / algebra | STEP 842 + 843 | open |
+| 011 | Sufficient structural identifier for atomic cores | Collatz-equivalent | STEP 867-869 | open |
+| 012 | Peak 9232 universality (37.7% of small odd n) | Collatz-equivalent | STEP 867 | open, empirical |
+| 013 | C8 iterate-bound theorem (Lean 4 formalization) | Collatz / Lean 4 | STEP 866 | open, partial |
 
 ## 構造 (Structure)
 
