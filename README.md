@@ -40,6 +40,8 @@ Date: 2026-04-17–
 | 011 | Sufficient structural identifier for atomic cores | Collatz-equivalent | STEP 867-869 | open |
 | 012 | Peak 9232 universality (37.7% of small odd n) | Collatz-equivalent | STEP 867 | open, empirical |
 | 013 | C8 iterate-bound theorem (Lean 4 formalization) | Collatz / Lean 4 | STEP 866 | open, partial |
+| 014 | Braille-rule vs CLIP performance convergence | Empirical / ML | Paper 110 M1 | open, empirical |
+| 015 | 26 non-atomic peak-9232 orbits missing fiber-57 | Collatz-equivalent | STEP 869 | open, structural |
 
 ## 構造 (Structure)
 
