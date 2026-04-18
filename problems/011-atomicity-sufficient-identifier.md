@@ -2,10 +2,10 @@
 
 - **ID**: 011
 - **Category**: Collatz-equivalent / Structural
-- **Source**: Rei-AIOS STEP 867–869 (2026-04-17)
-- **Status**: open
+- **Source**: Rei-AIOS STEP 867–869 (2026-04-17), STEP 871 (2026-04-18)
+- **Status**: open — partial characterization found (see "Update 2026-04-18")
 - **Discovered**: 2026-04-18
-- **Last updated**: 2026-04-18
+- **Last updated**: 2026-04-18 (STEP 871 added)
 
 ## Statement (informal)
 
@@ -52,14 +52,31 @@ Conjecture (open): ∃ predicate P : ℕ → Bool such that
 - **Structural identifier が見つかれば**, Collatz orbit properties を**計算せずに予測可能**に
 - これは Tao 2019 の logarithmic density 結果に structural perspective を与える可能性
 
+## Update (2026-04-18, STEP 871)
+
+**Partial characterization found**: ALL 188 peak=9232 orbits (not just the 25 atomic) converge to `3077 → 9232` as their single entry-step to the peak (3077 is the unique odd predecessor of 9232 since 3·3077+1 = 9232). The distinguishing factor between atomic and non-atomic is the **path taken to reach 3077**:
+
+- **25 atomic cores**: route to 3077 **includes fiber-57 gateway** ({121, 377}), producing K/bl² > 1.8 ("long trunk").
+- **137 non-atomic fiber-passing**: route includes fiber-57 but K/bl² ≤ 1.8 (short but fiber-routed).
+- **26 non-atomic fiber-missing**: route **bypasses fiber-57 entirely** — short alternative paths to 3077. Full list in STEP 871 test output.
+
+Revised candidate identifier:
+```
+P(n) := n passes through fiber-57 (reaches 121 or 377)
+        AND the path length before reaching 3077 is ≥ some threshold
+```
+Still not a O(polylog n) predicate, but the structural *shape* is now clarified. This reduces Problem 011 to: find a closed-form predicate on n's representation (mod/digit/p-adic) that predicts whether the orbit takes the "long fiber-57 trunk" vs. a "bypass."
+
 ## What is verified
 
 | 観点 | 状態 |
 |------|------|
 | 25 atomic cores の canonical list (mod 49152 saturation) | ✓ STEP 696 |
 | Peak = 9232 for all 25 | ✓ STEP 867 (25/25) |
-| fiber-57 necessary | ✓ STEP 869 (25/25) |
-| **sufficient structural identifier** | ❌ **open** |
+| fiber-57 necessary (not sufficient) | ✓ STEP 869 (25/25 atomic; 137/163 non-atomic also pass) |
+| **All 188 peak=9232 orbits use 3077 → 9232** | ✓ STEP 871 (universal entry step) |
+| **26 non-atomic orbits that bypass fiber-57 identified** | ✓ STEP 871 |
+| **sufficient structural identifier** | ❌ **still open** (but path-length characterization narrows the search) |
 | large-n (n > 10³) での 25 saturation 継続 | △ 部分確認, 10⁹ まで必要 |
 
 ## Candidate attack routes
