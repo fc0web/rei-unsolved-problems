@@ -2,10 +2,37 @@
 
 - **ID**: 011
 - **Category**: Collatz-equivalent / Structural
-- **Source**: Rei-AIOS STEP 867–869 (2026-04-17), STEP 871 (2026-04-18)
-- **Status**: open — partial characterization found (see "Update 2026-04-18")
+- **Source**: Rei-AIOS STEP 867–869 (2026-04-17), STEP 871 (2026-04-18), STEP 872/873 (2026-04-18)
+- **Status**: 🔬 **empirically resolved at n ≤ 10⁶ (pending asymptotic proof)** — candidate identifier: **"visits n=911 before descending below it"**
 - **Discovered**: 2026-04-18
-- **Last updated**: 2026-04-18 (STEP 871 added)
+- **Last updated**: 2026-04-18 (STEP 873 large-scale confirmation)
+
+## Update (2026-04-18, STEP 872 + 873)
+
+**STEP 872** discovered: **n=911 is a universal on-ramp** — all 25 atomic cores
+pass through it before reaching the peak-9232 funnel (911 → ... → 3077 → 9232).
+
+**STEP 873** verified at scale:
+| scale | atomic cores | atomic visiting 911 | necessity |
+|-------|--------------|---------------------|-----------|
+| n ≤ 10⁴ | 25 | 25 | **100%** |
+| n ≤ 10⁵ | 25 | 25 | **100%** |
+| n ≤ 10⁶ | 25 | 25 | **100%** |
+
+Also: at n ≤ 10⁶, exactly 25 atomic cores exist. **No new atomic cores appear
+beyond [27, 235].** (Stronger saturation than STEP 696's mod 49152 result.)
+
+**Candidate sufficient identifier (polynomial-time decidable given the orbit)**:
+```
+P(n) := n odd AND trajectory visits 911 AND K(n)/bitLen(n)² > 1.8
+```
+Or equivalently at n ≤ 10⁶:
+```
+P(n) := n ∈ [27, 235] odd AND trajectory visits 911
+```
+
+**Remaining to close**: asymptotic proof that no n > 235 has K/bl² > 1.8.
+Empirically true at n ≤ 10⁶.
 
 ## Statement (informal)
 

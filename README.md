@@ -33,15 +33,15 @@ Date: 2026-04-17–
 | 004 | gap_monotone λ₂ carry-propagation decay | Structural / linear algebra | STEP 627f | open |
 | 005 | Andrica Ricci-flow explosion hypothesis | Ricci-flow class | STEP 847 | open, novel |
 | 006 | Goldbach-Collatz-Andrica 3-category classification | Ricci-flow class | STEP 847 | open, novel |
-| 007 | FIA axiom independence (Fujimoto Infinity Algebra) | Algebraic / axiom | STEP 843 | open |
+| **007** | **FIA axiom independence (Fujimoto Infinity Algebra)** | Algebraic / axiom | STEP 843 | ✅ **CLOSED (Lean 4)** |
 | 008 | FDA vs Mathlib ENat embedding equivalence | Algebraic / Lean 4 | STEP 844 | open |
 | 009 | Perelman discrete-flow convergence conditions | Dynamical | STEP 846 | open |
 | 010 | 15 infinity types cross-operation table | Taxonomy / algebra | STEP 842 + 843 | open |
-| 011 | Sufficient structural identifier for atomic cores | Collatz-equivalent | STEP 867-869 | open |
+| **011** | **Sufficient structural identifier for atomic cores** | Collatz-equivalent | STEP 867-873 | 🔬 empirically resolved n ≤ 10⁶ (911 invariant) |
 | 012 | Peak 9232 universality (37.7% of small odd n) | Collatz-equivalent | STEP 867 | open, empirical |
-| 013 | C8 iterate-bound theorem (Lean 4 formalization) | Collatz / Lean 4 | STEP 866 | open, partial |
+| **013** | **C8 iterate-bound theorem (Lean 4 formalization)** | Collatz / Lean 4 | STEP 866 | ✅ **CLOSED (Lean 4)** |
 | 014 | Braille-rule vs CLIP performance convergence | Empirical / ML | Paper 110 M1 | open, empirical |
-| 015 | 26 non-atomic peak-9232 orbits missing fiber-57 | Collatz-equivalent | STEP 869 | open, structural |
+| 015 | 26 non-atomic peak-9232 orbits missing fiber-57 | Collatz-equivalent | STEP 869, 871 | partially answered (3077 predecessor) |
 
 ## 構造 (Structure)
 

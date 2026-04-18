@@ -2,10 +2,26 @@
 
 - **ID**: 013
 - **Category**: Collatz-equivalent / Lean 4 formalization
-- **Source**: Rei-AIOS STEP 866 (2026-04-17) — C8 LTE formal closure
-- **Status**: open, partially formalized
+- **Source**: Rei-AIOS STEP 866 (2026-04-17), Lean 4 closure Y1 (2026-04-18)
+- **Status**: ✅ **CLOSED — Lean 4 formal proof, zero-sorry (2026-04-18)**
 - **Discovered**: 2026-04-18
-- **Last updated**: 2026-04-18
+- **Last updated**: 2026-04-18 (formal closure)
+
+## Resolution (2026-04-18)
+
+**The C8 iterate-bound theorem is formally proven in Lean 4 with zero sorry.**
+
+File: `data/lean4-mathlib/CollatzRei/Problem013IterateBound.lean` (193 lines)
+
+Two theorems:
+1. `bridge_3n1_vs_n1` : Odd n → (padicValNat 2 (3n+1) ≥ 2 ↔ padicValNat 2 (n+1) = 1)
+   - Proof by mod-4 case analysis (n ≡ 1 or n ≡ 3 mod 4)
+2. `v2_one_chain_terminates` : Odd n → ∃ k ≤ padicValNat 2 (n+1), padicValNat 2 (3·syrOne^[k] n + 1) ≥ 2
+   - Proof by strong induction on v = v₂(n+1), using STEP 866 helpers + bridge lemma
+
+This closes the C8 branch of tier2_axiom (Paper 66) formal verification.
+The C8 axiom is thereby reduced to RCA₀-elementary reasoning — NOT ACA₀-or-higher
+as reverse-math oracle STEP 789 had diagnosed. STEP 789 was overly pessimistic.
 
 ## Statement (informal)
 

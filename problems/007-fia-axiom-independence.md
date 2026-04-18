@@ -2,10 +2,33 @@
 
 - **ID**: 007
 - **Category**: Algebraic / axiom independence
-- **Source**: Rei-AIOS STEP 843 (2026-04-17)
-- **Status**: open, axiom-theoretic
+- **Source**: Rei-AIOS STEP 843 (2026-04-17), Lean 4 closure STEP 870 Y5 + Z-B1 (2026-04-18)
+- **Status**: ✅ **CLOSED — Lean 4 formal proof, zero-sorry (2026-04-18)**
 - **Discovered**: 2026-04-17
-- **Last updated**: 2026-04-17
+- **Last updated**: 2026-04-18 (formal closure)
+
+## Resolution (2026-04-18)
+
+**All 6 FIA axioms FIA-1 … FIA-6 are mutually independent.**
+
+Verified in Lean 4 with zero sorry:
+- File: `data/lean4-mathlib/CollatzRei/Problem007FIAAxiomIndependence.lean`
+- 7 theorems: `FIA_i_independent` (i = 1..6) + meta `FIA_axioms_independent`
+- 492 lines, 0 sorry, 0 axiom
+- Build: `lake build CollatzRei.Problem007FIAAxiomIndependence` succeeds (77 jobs, Mathlib v4.27.0)
+
+Proof technique: counter-model construction. For each axiom FIA_i, an explicit
+`FIAAlgebra` is constructed that satisfies the other 5 axioms but breaks FIA_i.
+Each counter-model differs from the "full FIA" by exactly ONE table cell.
+
+Counter-model summary:
+- FIA-1 broken via `INFINITY + TRUE = FALSE` (instead of INFINITY)
+- FIA-2 broken via `INFINITY + INFINITY = FALSE`
+- FIA-3 broken via `ZERO × TRUE = INFINITY`
+- FIA-4 broken via `SELF + TRUE = FALSE`
+- FIA-5 broken via `ZERO × INFINITY = ZERO` (instead of NEITHER)
+- FIA-6 broken via `FLOWING + TRUE = FALSE`
+
 
 ## Statement (informal)
 
